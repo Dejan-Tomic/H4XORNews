@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Detail.swift
 //  H4XORNews
 //
 //  Created by Dejan Tomic on 16/06/2020.
@@ -8,14 +8,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DetailView: View {
+    
+    let url: String?
     var body: some View {
-        Text("Hello, World!")
+        WebView(urlString: url)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Detail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DetailView(url: "http://google.com")
     }
 }
+
